@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Active Link Highlighting on Scroll ---
-    const sections = document.querySelectorAll('section, header');
+    const sections = document.querySelectorAll('section, header, footer');
     
     window.addEventListener('scroll', () => {
         let current = '';
@@ -95,4 +95,85 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, 100);
+
+    // --- Multilingual Translation Logic ---
+    const langModal = document.getElementById('language-modal');
+    
+    // Language Code to Name Mapping
+    const langLabels = {
+        en: 'English',
+        hi: 'हिन्दी',
+        bn: 'বাংলা'
+    };
+
+    // Update webpage elements based on selected language
+    function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        localStorage.setItem('pref_lang', lang);
+        
+        // Update all translatable text nodes
+        const translatableElements = document.querySelectorAll('[data-i18n]');
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (typeof translations !== 'undefined' && translations[lang] && translations[lang][key] !== undefined) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Update UI state for active labels and classes
+        const activeLangText = document.querySelector('.active-lang-text');
+        if (activeLangText) {
+            activeLangText.textContent = langLabels[lang];
+        }
+
+        document.querySelectorAll('.lang-opt').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        document.querySelectorAll('.lang-mob-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+    }
+
+    // Modal Initial Setup
+    const storedLang = localStorage.getItem('pref_lang');
+    if (storedLang && typeof translations !== 'undefined' && translations[storedLang]) {
+        setLanguage(storedLang);
+        if (langModal) {
+            langModal.classList.remove('active');
+        }
+    } else {
+        if (langModal) {
+            langModal.classList.add('active');
+        }
+    }
+
+    // Event Listeners for Modal Selection Buttons
+    document.querySelectorAll('.modal-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+            if (langModal) {
+                langModal.classList.remove('active');
+            }
+        });
+    });
+
+    // Event Listeners for Desktop Dropdown Buttons
+    document.querySelectorAll('.lang-opt').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+
+    // Event Listeners for Mobile Switcher Buttons
+    document.querySelectorAll('.lang-mob-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
 });

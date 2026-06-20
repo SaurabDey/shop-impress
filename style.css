@@ -239,11 +239,11 @@ img {
 }
 
 /* Floating capsule navbar layout for desktops */
-@media (min-width: 769px) {
+@media (min-width: 1101px) {
     .navbar.scrolled {
         top: 15px;
-        left: 5%;
-        width: 90%;
+        left: 4%;
+        width: 92%;
         border-radius: var(--radius);
         border: 1.5px solid rgba(201, 168, 76, 0.35);
     }
@@ -257,6 +257,7 @@ img {
     max-width: 1200px; /* Synchronized with main container width to prevent logo pushing too far left */
     margin: 0 auto;
     padding: 0 24px; /* Synchronized with main container padding */
+    gap: 20px; /* Prevents menu links from bumping into the logo on tight screens */
 }
 
 .logo {
@@ -268,6 +269,8 @@ img {
     text-transform: uppercase;
     position: relative;
     transition: var(--transition);
+    flex-shrink: 0;
+    margin-right: 20px; /* Ensures space to the right of the absolute '.' dot */
 }
 
 .logo::after {
@@ -287,17 +290,18 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px; /* Reduced from 32px to prevent horizontal overflow in floating state */
 }
 
 .nav-link {
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--navy);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     position: relative;
     padding: 6px 0;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -324,6 +328,7 @@ img {
     padding: 10px 22px;
     letter-spacing: 2px;
     border-radius: 50px;
+    flex-shrink: 0;
 }
 
 .mobile-toggle {
@@ -975,3 +980,307 @@ img {
         text-align: center;
     }
 }
+
+/* --- Multilingual Language Selection Modal & Switcher CSS --- */
+
+/* Language Selection Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 28, 46, 0.85); /* Navy background with transparency */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure overlay covers everything, including navbar */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal Card */
+.modal-card {
+    background: rgba(247, 242, 232, 0.98); /* Cream background */
+    border: 2px solid var(--gold);
+    border-radius: var(--radius-lg);
+    width: 90%;
+    max-width: 480px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(30px);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+/* Modal Logo */
+.modal-logo {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.modal-logo span {
+    color: var(--gold);
+    font-size: 2.5rem;
+}
+
+.modal-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.modal-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+/* Modal Language Options */
+.modal-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Modal Option Button styling */
+.modal-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    border: 1.5px solid rgba(201, 168, 76, 0.3);
+    border-radius: var(--radius);
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-btn .lang-title {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.modal-btn .lang-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    transition: var(--transition);
+}
+
+.modal-btn:hover {
+    border-color: var(--gold);
+    background: var(--cream2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(12, 28, 46, 0.05);
+}
+
+.modal-btn:hover .lang-sub {
+    color: var(--gold);
+}
+
+
+/* Navbar Language Selector */
+.nav-lang-selector {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+/* Desktop Dropdown Styles */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-dropbtn {
+    background: transparent;
+    border: 1.5px solid rgba(201, 168, 76, 0.3);
+    border-radius: 4px;
+    color: var(--navy);
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lang-dropbtn i {
+    font-size: 1rem;
+}
+
+.lang-dropdown:hover .lang-dropbtn,
+.lang-dropbtn:focus {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.08);
+}
+
+.lang-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--white);
+    min-width: 130px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 4px;
+    z-index: 1001;
+    overflow: hidden;
+    animation: fadeInDropdown 0.3s var(--ease);
+}
+
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lang-dropdown:hover .lang-dropdown-content {
+    display: block;
+}
+
+.lang-opt {
+    color: var(--navy);
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.lang-opt:hover {
+    background-color: var(--cream);
+    color: var(--gold);
+}
+
+.lang-opt.active {
+    background-color: var(--cream2);
+    color: var(--navy);
+    font-weight: 700;
+    border-left: 3px solid var(--gold);
+}
+
+/* Hide Mobile switcher buttons by default on desktop */
+.lang-mobile-buttons {
+    display: none;
+}
+
+
+/* Language Specific Typography Overrides */
+/* Hindi Typography Rules */
+html[lang="hi"], html[lang="hi"] body,
+html[lang="hi"] button, html[lang="hi"] input, html[lang="hi"] select {
+    font-family: 'Poppins', var(--font-body);
+}
+
+html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3,
+html[lang="hi"] h4, html[lang="hi"] h5, html[lang="hi"] h6, html[lang="hi"] .logo {
+    font-family: 'Poppins', var(--font-heading);
+}
+
+/* Bengali Typography Rules */
+html[lang="bn"], html[lang="bn"] body,
+html[lang="bn"] button, html[lang="bn"] input, html[lang="bn"] select {
+    font-family: 'Hind Siliguri', var(--font-body);
+}
+
+html[lang="bn"] h1, html[lang="bn"] h2, html[lang="bn"] h3,
+html[lang="bn"] h4, html[lang="bn"] h5, html[lang="bn"] h6, html[lang="bn"] .logo {
+    font-family: 'Hind Siliguri', var(--font-heading);
+}
+
+
+/* --- Mobile Responsive Switcher CSS --- */
+@media (max-width: 768px) {
+    /* Hide desktop dropdown on mobile screens */
+    .lang-dropdown {
+        display: none;
+    }
+
+    /* Show mobile switcher buttons */
+    .lang-mobile-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .lang-mob-btn {
+        background: transparent;
+        border: 1px solid rgba(12, 28, 46, 0.15);
+        color: var(--navy);
+        padding: 8px 18px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-family: var(--font-body);
+    }
+
+    .lang-mob-btn.active {
+        background: var(--navy);
+        color: var(--white);
+        border-color: var(--navy);
+        box-shadow: 0 4px 10px rgba(12, 28, 46, 0.15);
+    }
+}
+
+/* Medium viewports (769px to 1100px) navbar scaling */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .nav-links {
+        gap: 12px;
+    }
+    .nav-link {
+        font-size: 0.72rem;
+        letter-spacing: 0.8px;
+    }
+    .nav-cta {
+        padding: 8px 14px;
+        font-size: 8.5px;
+        letter-spacing: 1px;
+    }
+    .nav-container {
+        padding: 0 16px;
+        gap: 15px; /* Minimum gap between logo and links on medium screens */
+    }
+}
+

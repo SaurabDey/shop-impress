@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Boxicons for Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -23,16 +23,39 @@
         <div class="nav-container">
             <a href="#home" class="logo">IMPRESS</a>
             <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#announcements" class="nav-link">What's New</a>
-                <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#contact" class="nav-link">Find Us</a>
-                <a href="https://wa.me/918794050870" class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer">
+                <a href="#home" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+                <a href="#products" class="nav-link" data-i18n="nav_products">Products</a>
+                <a href="#announcements" class="nav-link" data-i18n="nav_whats_new">What's New</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_gallery">Gallery</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_find_us">Find Us</a>
+                <a href="https://wa.me/918794050870" class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav_cta">
                     <i class='bx bxl-whatsapp'></i> Send Document / Order
                 </a>
+                
+                <!-- Persistent Language Selector -->
+                <div class="nav-lang-selector">
+                    <!-- Desktop Dropdown -->
+                    <div class="lang-dropdown">
+                        <button class="lang-dropbtn" aria-label="Select Language">
+                            <i class='bx bx-globe'></i>
+                            <span class="active-lang-text">English</span>
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <div class="lang-dropdown-content">
+                            <button data-lang="en" class="lang-opt active">English</button>
+                            <button data-lang="hi" class="lang-opt">हिन्दी</button>
+                            <button data-lang="bn" class="lang-opt">বাংলা</button>
+                        </div>
+                    </div>
+                    <!-- Mobile Buttons -->
+                    <div class="lang-mobile-buttons">
+                        <button data-lang="en" class="lang-mob-btn active">EN</button>
+                        <button data-lang="hi" class="lang-mob-btn">हिन्दी</button>
+                        <button data-lang="bn" class="lang-mob-btn">বাংলা</button>
+                    </div>
+                </div>
             </div>
             <div class="mobile-toggle" id="mobile-toggle">
                 <i class='bx bx-menu'></i>
@@ -48,8 +71,8 @@
                     <i class='bx bx-broadcast'></i>
                 </div>
                 <div class="announcement-content">
-                    <h3>📢 Now Assisting with Senior Citizen Card Applications!</h3>
-                    <p>Visit our small shop in Polo Bazar to get seamless help with the registration, processing, and printing of your official Senior Citizen Card.</p>
+                    <h3 data-i18n="announcement_title">📢 Now Assisting with Senior Citizen Card Applications!</h3>
+                    <p data-i18n="announcement_desc">Visit our small shop in Polo Bazar to get seamless help with the registration, processing, and printing of your official Senior Citizen Card.</p>
                 </div>
             </div>
         </div>
@@ -59,14 +82,14 @@
     <header id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content reveal">
-            <h1>A Small Shop with <span class="highlight">Big Solutions</span></h1>
-            <p class="hero-subtitle">Custom Stamps, Printing, Puja Samagri, and Daily Essentials in Shillong.</p>
-            <p class="hero-description">Serving Polo Bazar with high-quality printing, retail goods, and digital document assistance. We may be a small storefront, but we house a massive variety of everyday essentials!</p>
+            <h1 data-i18n="hero_title">A Small Shop with <span class="highlight">Big Solutions</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Custom Stamps, Printing, Puja Samagri, and Daily Essentials in Shillong.</p>
+            <p class="hero-description" data-i18n="hero_description">Serving Polo Bazar with high-quality printing, retail goods, and digital document assistance. We may be a small storefront, but we house a massive variety of everyday essentials!</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/918794050870" class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/918794050870" class="btn btn-whatsapp btn-large" target="_blank" rel="noopener noreferrer" data-i18n="hero_cta_whatsapp">
                     <i class='bx bxl-whatsapp'></i> Chat on WhatsApp
                 </a>
-                <a href="#services" class="btn btn-secondary btn-large">View Our Services</a>
+                <a href="#services" class="btn btn-secondary btn-large" data-i18n="hero_cta_services">View Our Services</a>
             </div>
         </div>
     </header>
@@ -79,14 +102,14 @@
                     <!-- Placeholder for shop/owner image -->
                     <div class="about-image-placeholder">
                         <i class='bx bx-store-alt'></i>
-                        <span>The Heart of the Shop</span>
+                        <span data-i18n="about_placeholder_text">The Heart of the Shop</span>
                     </div>
                 </div>
                 <div class="about-text">
-                    <h2 class="section-title">The Heart of the Shop</h2>
+                    <h2 class="section-title" data-i18n="about_title">The Heart of the Shop</h2>
                     <div class="title-divider"></div>
-                    <p><strong>Impress</strong> is a cozy, small local shop proudly run by a dedicated duo: a 75+ year-old father and his 35+ year-old son.</p>
-                    <p>Despite having a hearing disability, the son actively manages and operates the entire shop's technical and printing setup with absolute precision and care. When you support Impress, you are supporting a legacy of resilience, local family values, and unmatched community service in Shillong.</p>
+                    <p data-i18n="about_text_1"><strong>Impress</strong> is a cozy, small local shop proudly run by a dedicated duo: a 75+ year-old father and his 35+ year-old son.</p>
+                    <p data-i18n="about_text_2">Despite having a hearing disability, the son actively manages and operates the entire shop's technical and printing setup with absolute precision and care. When you support Impress, you are supporting a legacy of resilience, local family values, and unmatched community service in Shillong.</p>
                 </div>
             </div>
         </div>
@@ -96,40 +119,40 @@
     <section id="services" class="services section-padding bg-light reveal">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Services Offered</h2>
+                <h2 class="section-title" data-i18n="services_title">Services Offered</h2>
                 <div class="title-divider center"></div>
-                <p class="section-subtitle">Professional document and printing solutions at the best rates in town.</p>
+                <p class="section-subtitle" data-i18n="services_subtitle">Professional document and printing solutions at the best rates in town.</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class='bx bxs-camera'></i></div>
-                    <h3>Instant Passport Size Photos</h3>
-                    <p>Made and collected instantly at the cheapest rate in town!</p>
+                    <h3 data-i18n="service_photos_title">Instant Passport Size Photos</h3>
+                    <p data-i18n="service_photos_desc">Made and collected instantly at the cheapest rate in town!</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon"><i class='bx bxs-stamp'></i></div>
-                    <h3>Rubber & Self-Inking Stamps</h3>
-                    <p>Custom standard rubber stamps and convenient, pre-inked computerized self-stamps.</p>
+                    <h3 data-i18n="service_stamps_title">Rubber & Self-Inking Stamps</h3>
+                    <p data-i18n="service_stamps_desc">Custom standard rubber stamps and convenient, pre-inked computerized self-stamps.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon"><i class='bx bxs-printer'></i></div>
-                    <h3>High-Quality Printing</h3>
-                    <p>Color and crisp Black & White printing. Full support for multiple sizes up to Legal and A3 size.</p>
+                    <h3 data-i18n="service_printing_title">High-Quality Printing</h3>
+                    <p data-i18n="service_printing_desc">Color and crisp Black & White printing. Full support for multiple sizes up to Legal and A3 size.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon"><i class='bx bxs-copy'></i></div>
-                    <h3>Xerox & Photocopying</h3>
-                    <p>Fast, clear copies for all your daily document needs.</p>
+                    <h3 data-i18n="service_xerox_title">Xerox & Photocopying</h3>
+                    <p data-i18n="service_xerox_desc">Fast, clear copies for all your daily document needs.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon"><i class='bx bx-scan'></i></div>
-                    <h3>Lamination & Scanning</h3>
-                    <p>High-resolution document scanning and durable protective lamination.</p>
+                    <h3 data-i18n="service_lam_title">Lamination & Scanning</h3>
+                    <p data-i18n="service_lam_desc">High-resolution document scanning and durable protective lamination.</p>
                 </div>
             </div>
         </div>
@@ -139,9 +162,9 @@
     <section id="products" class="products section-padding reveal">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Products Available</h2>
+                <h2 class="section-title" data-i18n="products_title">Products Available</h2>
                 <div class="title-divider center"></div>
-                <p class="section-subtitle">A massive variety of everyday essentials housed in our small storefront.</p>
+                <p class="section-subtitle" data-i18n="products_subtitle">A massive variety of everyday essentials housed in our small storefront.</p>
             </div>
             
             <div class="products-grid">
@@ -150,8 +173,8 @@
                         <i class='bx bx-candles'></i>
                     </div>
                     <div class="product-info">
-                        <h3>Puja Samagri & Idols</h3>
-                        <p>Essential items for daily rituals, home temples, and festive celebrations. We also offer a beautiful collection of sacred Gods' idols.</p>
+                        <h3 data-i18n="product_puja_title">Puja Samagri & Idols</h3>
+                        <p data-i18n="product_puja_desc">Essential items for daily rituals, home temples, and festive celebrations. We also offer a beautiful collection of sacred Gods' idols.</p>
                     </div>
                 </div>
                 
@@ -160,8 +183,8 @@
                         <i class='bx bx-image'></i>
                     </div>
                     <div class="product-info">
-                        <h3>Photo Frames</h3>
-                        <p>High-quality frames available in various sizes to preserve your memories perfectly. We also specialize in beautifully framed pictures of Gods for your home or altar.</p>
+                        <h3 data-i18n="product_frames_title">Photo Frames</h3>
+                        <p data-i18n="product_frames_desc">High-quality frames available in various sizes to preserve your memories perfectly. We also specialize in beautifully framed pictures of Gods for your home or altar.</p>
                     </div>
                 </div>
                 
@@ -170,8 +193,8 @@
                         <i class='bx bx-spa'></i>
                     </div>
                     <div class="product-info">
-                        <h3>Plastic Garlands</h3>
-                        <p>Beautiful, long-lasting durable garlands designed specifically for photos and frames.</p>
+                        <h3 data-i18n="product_garlands_title">Plastic Garlands</h3>
+                        <p data-i18n="product_garlands_desc">Beautiful, long-lasting durable garlands designed specifically for photos and frames.</p>
                     </div>
                 </div>
             </div>
@@ -182,45 +205,45 @@
     <section id="gallery" class="gallery section-padding bg-light reveal">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Life at Impress / Our Work</h2>
+                <h2 class="section-title" data-i18n="gallery_title">Life at Impress / Our Work</h2>
                 <div class="title-divider center"></div>
-                <p class="section-subtitle">Take a glimpse inside our shop and the work we do.</p>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">Take a glimpse inside our shop and the work we do.</p>
             </div>
             
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">Shop Front</span>
+                        <span class="gallery-label" data-i18n="gallery_label_front">Shop Front</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">Custom Stamp Samples</span>
+                        <span class="gallery-label" data-i18n="gallery_label_stamps">Custom Stamp Samples</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">God Photo Frames and Idols Display</span>
+                        <span class="gallery-label" data-i18n="gallery_label_idols">God Photo Frames and Idols Display</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">Printing Setup</span>
+                        <span class="gallery-label" data-i18n="gallery_label_printing">Printing Setup</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">Puja Samagri Collection</span>
+                        <span class="gallery-label" data-i18n="gallery_label_puja">Puja Samagri Collection</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <span class="gallery-label">Happy Customers</span>
+                        <span class="gallery-label" data-i18n="gallery_label_customers">Happy Customers</span>
                         <div class="hover-overlay"><i class='bx bx-zoom-in'></i></div>
                     </div>
                 </div>
@@ -234,14 +257,14 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <h2 class="footer-logo">IMPRESS</h2>
-                    <p class="footer-desc">A legacy of resilience, local family values, and unmatched community service in Shillong.</p>
+                    <p class="footer-desc" data-i18n="footer_desc">A legacy of resilience, local family values, and unmatched community service in Shillong.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class='bx bxs-map'></i>
                             <div>
-                                <strong>Address:</strong><br>
-                                <a href="https://maps.app.goo.gl/SLreNnh7V1w93D6n8" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+                                <strong data-i18n="footer_address_title">Address:</strong><br>
+                                <a href="https://maps.app.goo.gl/SLreNnh7V1w93D6n8" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;" data-i18n="footer_address_text">
                                     Impress, Polo Bazar, beside Shikha Store,<br>
                                     Shillong, Meghalaya - 793001
                                 </a>
@@ -250,15 +273,17 @@
                         <div class="contact-item">
                             <i class='bx bxs-time-five'></i>
                             <div>
-                                <strong>Shop Timings:</strong><br>
-                                Open Daily from 10:00 AM to 8:30 PM<br>
-                                (Closed on Sundays)
+                                <strong data-i18n="footer_timings_title">Shop Timings:</strong><br>
+                                <span data-i18n="footer_timings_text">
+                                    Open Daily from 10:00 AM to 8:30 PM<br>
+                                    (Closed on Sundays)
+                                </span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class='bx bxl-whatsapp'></i>
                             <div>
-                                <strong>WhatsApp:</strong><br>
+                                <strong data-i18n="footer_whatsapp_title">WhatsApp:</strong><br>
                                 <a href="https://wa.me/918794050870" target="_blank" rel="noopener noreferrer">+91 87940 50870</a>
                             </div>
                         </div>
@@ -284,9 +309,33 @@
     <!-- Floating WhatsApp Widget -->
     <a href="https://wa.me/918794050870" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <i class='bx bxl-whatsapp'></i>
-        <span class="tooltip">Need Prints? Chat Now!</span>
+        <span class="tooltip" data-i18n="whatsapp_tooltip">Need Prints? Chat Now!</span>
     </a>
 
+    <!-- Language Selection Modal (Initial Load Overlay) -->
+    <div id="language-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-logo">IMPRESS<span>.</span></div>
+            <h2 data-i18n="modal_welcome">Welcome to Impress</h2>
+            <p data-i18n="modal_prompt">Please select your preferred language to browse our website.</p>
+            <div class="modal-options">
+                <button class="modal-btn" data-lang="en">
+                    <span class="lang-title">English</span>
+                    <span class="lang-sub">Primary Language</span>
+                </button>
+                <button class="modal-btn" data-lang="hi">
+                    <span class="lang-title">हिन्दी (Hindi)</span>
+                    <span class="lang-sub">हिंदी में ब्राउज़ करें</span>
+                </button>
+                <button class="modal-btn" data-lang="bn">
+                    <span class="lang-title">বাংলা (Bengali)</span>
+                    <span class="lang-sub">বাংলায় ব্রাউজ করুন</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
