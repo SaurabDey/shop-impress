@@ -588,11 +588,32 @@ img {
     border: 1.5px solid var(--cream2);
 }
 
+.service-icon-image {
+    background: var(--white);
+    border-color: rgba(201, 168, 76, 0.2);
+    box-shadow: 0 4px 10px rgba(12, 28, 46, 0.04);
+    padding: 12px; /* Pads the image so it fits elegantly within the circle */
+}
+
+.service-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
 .service-card:hover .service-icon {
     background: var(--navy);
     color: var(--white);
     border-color: var(--navy);
     transform: scale(1.05);
+}
+
+/* Maintain light background for image-based icons on card hover */
+.service-card:hover .service-icon-image {
+    background: var(--white);
+    border-color: var(--gold);
+    box-shadow: 0 6px 15px rgba(201, 168, 76, 0.15);
 }
 
 .service-card h3 {
