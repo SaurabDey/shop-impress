@@ -232,14 +232,21 @@ img {
 }
 
 .navbar.scrolled {
-    top: 15px;
-    left: 5%;
-    width: 90%;
     height: 70px;
-    border-radius: var(--radius);
     background: rgba(255, 255, 255, 0.96);
     box-shadow: var(--shadow-lg);
-    border: 1.5px solid rgba(201, 168, 76, 0.35);
+    border-bottom: 1.5px solid rgba(201, 168, 76, 0.35);
+}
+
+/* Floating capsule navbar layout for desktops */
+@media (min-width: 769px) {
+    .navbar.scrolled {
+        top: 15px;
+        left: 5%;
+        width: 90%;
+        border-radius: var(--radius);
+        border: 1.5px solid rgba(201, 168, 76, 0.35);
+    }
 }
 
 .nav-container {
@@ -247,9 +254,9 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    max-width: var(--max);
+    max-width: 1200px; /* Synchronized with main container width to prevent logo pushing too far left */
     margin: 0 auto;
-    padding: 0 var(--gutter);
+    padding: 0 24px; /* Synchronized with main container padding */
 }
 
 .logo {
@@ -935,6 +942,11 @@ img {
         align-items: center;
         transition: var(--transition);
         gap: 20px;
+    }
+
+    .navbar.scrolled .nav-links {
+        top: 70px;
+        height: calc(100vh - 70px);
     }
 
     .nav-links.active {
