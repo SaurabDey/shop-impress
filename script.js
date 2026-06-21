@@ -187,4 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.transform = `translateX(-${currentSlide * 100}%)`;
         }, 10000); // Rotate every 10 seconds
     }
+
+    // --- Product Slider Carousel ---
+    const productWrapper = document.querySelector('.product-slider-wrapper');
+    const productSlides = document.querySelectorAll('.product-slide');
+    if (productWrapper && productSlides.length > 0) {
+        let currentProductSlide = 0;
+        setInterval(() => {
+            currentProductSlide = (currentProductSlide + 1) % productSlides.length;
+            productWrapper.style.transform = `translateX(-${currentProductSlide * 100}%)`;
+        }, 2000); // Roll every 2 seconds
+    }
 });

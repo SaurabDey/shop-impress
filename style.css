@@ -434,7 +434,7 @@ img {
 
 .announcement-slide h3 {
     color: var(--navy); /* Deep navy text for legibility */
-    font-size: 1.05rem;
+    font-size: 1.25rem; /* Increased font size for higher prominence */
     font-weight: 600;
     margin-bottom: 8px; /* Increased spacing between lines */
 }
@@ -771,6 +771,31 @@ img {
     inset: 0;
     background: linear-gradient(to top, rgba(12, 28, 46, 0.5), transparent);
     z-index: 1;
+}
+
+/* Product slider carousel styling */
+.product-image-slider {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1.5px solid var(--cream);
+    background: var(--white);
+}
+
+.product-slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s var(--ease);
+}
+
+.product-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: contain; /* Prevents distortion, maintaining aspect ratio */
+    background: var(--white);
+    padding: 0; /* Fits perfectly edge-to-edge for 355x250px images */
 }
 
 .product-info {
