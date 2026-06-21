@@ -795,7 +795,7 @@ img {
     flex-shrink: 0;
     object-fit: contain; /* Prevents distortion, maintaining aspect ratio */
     background: var(--white);
-    padding: 0; /* Fits perfectly edge-to-edge for 355x250px images */
+    padding: 10px; /* Slight inset to look extremely premium */
 }
 
 .product-info {

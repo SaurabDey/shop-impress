@@ -188,14 +188,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10000); // Rotate every 10 seconds
     }
 
-    // --- Product Slider Carousel ---
-    const productWrapper = document.querySelector('.product-slider-wrapper');
-    const productSlides = document.querySelectorAll('.product-slide');
-    if (productWrapper && productSlides.length > 0) {
-        let currentProductSlide = 0;
-        setInterval(() => {
-            currentProductSlide = (currentProductSlide + 1) % productSlides.length;
-            productWrapper.style.transform = `translateX(-${currentProductSlide * 100}%)`;
-        }, 2000); // Roll every 2 seconds
-    }
+    // --- Product Slider Carousels ---
+    const productSliders = document.querySelectorAll('.product-image-slider');
+    productSliders.forEach(slider => {
+        const wrapper = slider.querySelector('.product-slider-wrapper');
+        const slides = slider.querySelectorAll('.product-slide');
+        if (wrapper && slides.length > 0) {
+            let currentSlide = 0;
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }, 2000); // Roll every 2 seconds
+        }
+    });
 });
