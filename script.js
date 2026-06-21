@@ -176,4 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
             setLanguage(lang);
         });
     });
+
+    // --- Rolling Announcements Carousel ---
+    const container = document.querySelector('.announcement-slides-container');
+    const slides = document.querySelectorAll('.announcement-slide');
+    if (container && slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            container.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }, 10000); // Rotate every 10 seconds
+    }
 });

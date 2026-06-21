@@ -338,41 +338,137 @@ img {
     cursor: pointer;
 }
 
-/* --- Announcements Banner --- */
+/* --- Announcements Banner (Top) --- */
 .announcements {
     margin-top: var(--nav-height);
-    background: linear-gradient(135deg, var(--teal), var(--gold));
-    padding: 20px 0;
-    color: var(--white);
-    border-bottom: 2px solid var(--cream2);
+    background: var(--cream); /* Soft off-white cream background */
+    padding: 16px 0;
+    border-bottom: 1.5px solid rgba(12, 28, 46, 0.08); /* Soft divider border */
+    position: relative;
+    z-index: 999;
 }
 
-.announcement-card {
+.announcement-card-v2 {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white); /* Premium clean white card */
+    border: 1px solid rgba(12, 28, 46, 0.08);
     border-radius: var(--radius);
-    padding: 20px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 24px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.announcement-icon i {
-    font-size: 2.5rem;
-    color: var(--cream);
-}
-
-.announcement-content h3 {
-    color: var(--white);
-    font-size: 1.25rem;
-    margin-bottom: 4px;
-}
-
-.announcement-content p {
-    font-size: 0.95rem;
-    opacity: 0.95;
+.announcement-badge-v2 {
+    background: linear-gradient(135deg, var(--gold), var(--gold2)); /* Gold gradient badge */
+    padding: 4px 10px;
+    border-radius: 4px;
     font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--navy); /* Dark navy text */
+    text-transform: uppercase;
+    flex-shrink: 0;
+    animation: badgeBlink 1.8s infinite ease-in-out;
+}
+
+.announcement-main-v2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.announcement-icon-v2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(201, 168, 76, 0.15); /* Light gold background tint */
+    border-radius: 50%;
+    color: var(--gold); /* Gold icon color */
+    flex-shrink: 0;
+}
+
+.announcement-icon-v2 i {
+    font-size: 1.3rem;
+}
+
+/* Pulsing icon animation */
+.pulse-icon {
+    animation: broadcastPulse 2s infinite;
+}
+
+@keyframes broadcastPulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes badgeBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.announcement-slides-window {
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.announcement-slides-container {
+    display: flex;
+    transition: transform 0.8s var(--ease);
+    width: 100%;
+}
+
+.announcement-slide {
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.announcement-slide h3 {
+    color: var(--navy); /* Deep navy text for legibility */
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px; /* Increased spacing between lines */
+}
+
+.announcement-slide p {
+    color: var(--navy); /* Deep navy text for legibility */
+    font-size: 0.85rem;
+    opacity: 0.85;
+    line-height: 1.4;
+    font-family: var(--font-body);
+}
+
+/* CTA button styling removed */
+
+/* Responsive banner layout for mobile */
+@media (max-width: 992px) {
+    .announcement-card-v2 {
+        flex-direction: column;
+        align-items: center; /* Center-align badge and text content */
+        gap: 14px;
+        padding: 16px;
+    }
+    
+    .announcement-main-v2 {
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .announcement-icon-v2 {
+        display: none; /* Hide icon on mobile/movie view */
+    }
+    
+    /* Mobile CTA overrides removed */
 }
 
 /* --- Hero Section --- */

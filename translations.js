@@ -9,8 +9,11 @@ const translations = {
         nav_find_us: "Find Us",
         nav_cta: "<i class='bx bxl-whatsapp'></i> Send Document / Order",
         
-        announcement_title: "📢 Now Assisting with Senior Citizen Card Applications!",
-        announcement_desc: "Visit our small shop in Polo Bazar to get seamless help with the registration, processing, and printing of your official Senior Citizen Card.",
+        announcement_eyebrow: "LATEST UPDATES",
+        announcement_title_1: "📢 Now Assisting with <strong>SENIOR CITIZEN CARD</strong> Applications!",
+        announcement_desc_1: "Visit our small shop in Polo Bazar to get seamless help with the registration, processing, and printing of your official <strong>SENIOR CITIZEN CARD</strong>.",
+        announcement_title_2: "📈 Connect with SEBI Registered <strong>MUTUAL FUND</strong> Advisor",
+        announcement_desc_2: "We can connect you to a SEBI registered <strong>MUTUAL FUND</strong> Advisor for increasing your wealth through safe and smart investments.",
         
         hero_title: "A Small Shop with <span class='highlight'>Big Solutions</span>",
         hero_subtitle: "Custom Stamps, Printing, Puja Samagri, and Daily Essentials in Shillong.",
@@ -81,8 +84,11 @@ const translations = {
         nav_find_us: "हमें खोजें",
         nav_cta: "<i class='bx bxl-whatsapp'></i> दस्तावेज़ भेजें / ऑर्डर करें",
         
-        announcement_title: "📢 अब वरिष्ठ नागरिक कार्ड आवेदनों में सहायता उपलब्ध है!",
-        announcement_desc: "अपने आधिकारिक वरिष्ठ नागरिक कार्ड के पंजीकरण, प्रसंस्करण और प्रिंटिंग में आसान मदद पाने के लिए पोलो बाजार में हमारी छोटी दुकान पर आएं।",
+        announcement_eyebrow: "नवीनतम अपडेट",
+        announcement_title_1: "📢 अब <strong>वरिष्ठ नागरिक कार्ड (SENIOR CITIZEN CARD)</strong> आवेदनों में सहायता उपलब्ध है!",
+        announcement_desc_1: "अपने आधिकारिक <strong>वरिष्ठ नागरिक कार्ड (SENIOR CITIZEN CARD)</strong> के पंजीकरण, प्रसंस्करण और प्रिंटिंग में आसान मदद पाने के लिए पोलो बाजार में हमारी छोटी दुकान पर आएं।",
+        announcement_title_2: "📈 सेबी (SEBI) पंजीकृत <strong>म्यूचुअल फंड (MUTUAL FUND)</strong> सलाहकार से जुड़ें",
+        announcement_desc_2: "सुरक्षित और स्मार्ट निवेश के माध्यम से अपनी संपत्ति बढ़ाने के लिए हम आपको सेबी पंजीकृत <strong>म्यूचुअल फंड (MUTUAL FUND)</strong> सलाहकार से जोड़ सकते हैं।",
         
         hero_title: "एक छोटी दुकान, <span class='highlight'>बड़े समाधान</span>",
         hero_subtitle: "कस्टम स्टैम्प, प्रिंटिंग, पूजा सामग्री और दैनिक आवश्यकताएं शिलॉन्ग में।",
@@ -153,8 +159,11 @@ const translations = {
         nav_find_us: "ঠিকানা",
         nav_cta: "<i class='bx bxl-whatsapp'></i> ডকুমেন্ট পাঠান / অর্ডার করুন",
         
-        announcement_title: "📢 এখন প্রবীণ नागरिक কার্ড আবেদনের সুবিধা পাওয়া যাচ্ছে!",
-        announcement_desc: "আপনার অফিসিয়াল প্রবীণ নাগরিক কার্ডের রেজিস্ট্রেশন, প্রসেসিং এবং প্রিন্টিং-এর জন্য পোলো বাজারে আমাদের ছোট দোকানে যোগাযোগ করুন।",
+        announcement_eyebrow: "নতুন আপডেট",
+        announcement_title_1: "📢 এখন <strong>প্রবীণ নাগরিক কার্ড (SENIOR CITIZEN CARD)</strong> আবেদনের সুবিধা পাওয়া যাচ্ছে!",
+        announcement_desc_1: "আপনার অফিসিয়াল <strong>প্রবীণ নাগরিক কার্ড (SENIOR CITIZEN CARD)</strong> রেজিস্ট্রেশন, প্রসেসিং এবং প্রিন্টিং-এর জন্য পোলো বাজারে আমাদের ছোট দোকানে যোগাযোগ করুন।",
+        announcement_title_2: "📈 সেবি (SEBI) নিবন্ধিত <strong>মিউচুয়াল ফান্ড (MUTUAL FUND)</strong> উপদেষ্টার সাথে যুক্ত হোন",
+        announcement_desc_2: "নিরাপদ এবং সঠিক উপায়ে আপনার সম্পদ বৃদ্ধির জন্য আমরা আপনাকে একজন সেবি নিবন্ধিত <strong>মিউচুয়াল ফান্ড (MUTUAL FUND)</strong> উপদেষ্টার সাথে যুক্ত করতে পারি।",
         
         hero_title: "একটি ছোট দোকান, <span class='highlight'>বৃহৎ সমাধান</span>",
         hero_subtitle: "কাস্টম স্ট্যাম্প, প্রিন্টিং, পূজা সামগ্রী এবং নিত্যপ্রয়োজনীয় জিনিসপত্র শিলং-এ।",
