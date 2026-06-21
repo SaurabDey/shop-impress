@@ -38,6 +38,8 @@ const translations = {
         service_xerox_desc: "Fast, clear copies for all your daily document needs.",
         service_lam_title: "Lamination & Scanning",
         service_lam_desc: "High-resolution document scanning and durable protective lamination.",
+        service_all_title: "Quick Digital Services",
+        service_all_desc: "All-in-one digital document services, custom self-inking stamps, instant passport photos, lamination, and more.",
         
         products_title: "Products Available",
         products_subtitle: "A massive variety of everyday essentials housed in our small storefront.",
@@ -113,6 +115,8 @@ const translations = {
         service_xerox_desc: "आपके दैनिक दस्तावेज़ की ज़रूरतों के लिए तेज़, स्पष्ट प्रतियां।",
         service_lam_title: "लेमिनेशन और स्कैनिंग",
         service_lam_desc: "उच्च-रिज़ॉल्यूशन दस्तावेज़ स्कैनिंग और टिकाऊ सुरक्षात्मक लेमिनेशन।",
+        service_all_title: "त्वरित डिजिटल सेवाएँ",
+        service_all_desc: "ऑल-इन-वन डिजिटल दस्तावेज़ सेवाएँ, कस्टम सेल्फ-इंकिंग स्टैम्प, तुरंत पासपोर्ट फोटो, लेमिनेशन, और बहुत कुछ।",
         
         products_title: "उपलब्ध उत्पाद",
         products_subtitle: "हमारी छोटी दुकान में दैनिक ज़रूरतों की एक विशाल विविधता।",
@@ -188,6 +192,8 @@ const translations = {
         service_xerox_desc: "আপনার প্রতিদিনের ডকুমেন্টের জন্য দ্রুত ও পরিষ্কার ফটোকপি।",
         service_lam_title: "ল্যামিনেশন ও স্ক্যানিং",
         service_lam_desc: "হাই-রেজোলিউশন ডকুমেন্ট স্ক্যানিং এবং দীর্ঘস্থায়ী সুরক্ষামূলক ল্যামিনেশন।",
+        service_all_title: "কুইক ডিজিটাল সার্ভিস",
+        service_all_desc: "অল-ইন-ওয়ান ডিজিটাল ডকুমেন্ট সার্ভিস, কাস্টম সেলফ-ইঙ্কিং স্ট্যাম্প, ইনস্ট্যান্ট পাসপোর্ট ছবি, ল্যামিনেশন এবং আরও অনেক কিছু।",
         
         products_title: "উপলব্ধ পণ্যসমূহ",
         products_subtitle: "আমাদের ছোট দোকানে নিত্যপ্রয়োজনীয় জিনিসের এক বিশাল বৈচিত্র্য।",
