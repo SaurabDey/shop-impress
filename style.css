@@ -599,6 +599,22 @@ img {
     z-index: 2;
 }
 
+.about-img {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    height: 420px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--cream2);
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.about-image-wrapper:hover .about-img {
+    transform: scale(1.02);
+}
+
 .about-image-placeholder i {
     font-size: 4rem;
     margin-bottom: 16px;
