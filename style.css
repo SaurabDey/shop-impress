@@ -923,21 +923,7 @@ img {
 }
 
 .hover-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(12, 28, 46, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    font-size: 3rem;
-    opacity: 0;
-    transition: var(--transition);
-    z-index: 3;
-}
-
-.gallery-item:hover .hover-overlay {
-    opacity: 1;
+    display: none !important;
 }
 
 .gallery-item:hover .gallery-placeholder {
@@ -1413,7 +1399,7 @@ html[lang="hi"] button, html[lang="hi"] input, html[lang="hi"] select {
 }
 
 html[lang="hi"] h1, html[lang="hi"] h2, html[lang="hi"] h3,
-html[lang="hi"] h4, html[lang="hi"] h5, html[lang="hi"] h6, html[lang="hi"] .logo {
+html[lang="hi"] h4, html[lang="hi"] h5, html[lang="hi"] h6 {
     font-family: 'Poppins', var(--font-heading);
 }
 
@@ -1424,8 +1410,39 @@ html[lang="bn"] button, html[lang="bn"] input, html[lang="bn"] select {
 }
 
 html[lang="bn"] h1, html[lang="bn"] h2, html[lang="bn"] h3,
-html[lang="bn"] h4, html[lang="bn"] h5, html[lang="bn"] h6, html[lang="bn"] .logo {
+html[lang="bn"] h4, html[lang="bn"] h5, html[lang="bn"] h6 {
     font-family: 'Hind Siliguri', var(--font-heading);
+}
+
+/* branding logo locks (always render in premium English Cormorant Garamond serif) */
+.logo, .footer-logo, .modal-logo {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+/* Normalize navigation links to achieve visual scale parity across languages */
+html[lang="hi"] .nav-link, html[lang="bn"] .nav-link {
+    font-size: 0.85rem; /* Increased to match the visual height/weight of English uppercase Jost */
+    letter-spacing: 1.2px; /* Matched to English letter-spacing */
+}
+
+html[lang="hi"] .nav-cta, html[lang="bn"] .nav-cta {
+    font-size: 9px; /* Matched to English size */
+    letter-spacing: 1.2px; /* Matched to English spacing */
+    padding: 10px 20px;
+}
+
+/* Spread out Hindi and Bengali links on desktop to reduce the gap between the logo and menu */
+@media (min-width: 1201px) {
+    html[lang="hi"] .nav-links, html[lang="bn"] .nav-links {
+        gap: 34px;
+    }
+}
+
+/* Medium viewports gap adjustment for Hindi and Bengali */
+@media (max-width: 1200px) and (min-width: 769px) {
+    html[lang="hi"] .nav-links, html[lang="bn"] .nav-links {
+        gap: 22px;
+    }
 }
 
 
