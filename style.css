@@ -883,6 +883,76 @@ img {
     background: var(--white);
 }
 
+/* Gallery Navigation Arrows (Stagnant sliders click-to-nav) */
+.gallery-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(12, 28, 46, 0.1);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: var(--transition);
+    opacity: 0;
+    pointer-events: auto;
+    box-shadow: 0 4px 12px rgba(12, 28, 46, 0.15);
+}
+
+.gallery-nav-btn i {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.gallery-nav-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav-btn.prev {
+    left: -10px;
+    transition: left 0.3s ease, opacity 0.3s ease, background 0.3s, transform 0.3s;
+}
+
+.gallery-nav-btn.next {
+    right: -10px;
+    transition: right 0.3s ease, opacity 0.3s ease, background 0.3s, transform 0.3s;
+}
+
+/* Reveal navigation arrows on hover of gallery item */
+.gallery-item:hover .gallery-nav-btn {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-nav-btn.prev {
+    left: 12px;
+}
+
+.gallery-item:hover .gallery-nav-btn.next {
+    right: 12px;
+}
+
+/* Make arrows visible by default on screens/touch devices without cursor hover */
+@media (max-width: 768px) {
+    .gallery-nav-btn {
+        opacity: 0.85;
+    }
+    .gallery-nav-btn.prev {
+        left: 10px;
+    }
+    .gallery-nav-btn.next {
+        right: 10px;
+    }
+}
+
 .gallery-item:hover .gallery-label {
     opacity: 0;
 }
