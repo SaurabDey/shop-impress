@@ -56,8 +56,7 @@ const translations = {
         gallery_label_stamps: "Custom Stamp Samples",
         gallery_label_idols: "God Photo Frames and Idols Display",
         gallery_label_printing: "Printing Setup",
-        gallery_label_puja: "Puja Samagri Collection",
-        gallery_label_customers: "Happy Customers",
+        gallery_label_misc: "Miscellaneous Collection",
         
         footer_desc: "A legacy of resilience, local family values, and unmatched community service in Shillong.",
         footer_address_title: "Address:",
@@ -133,8 +132,7 @@ const translations = {
         gallery_label_stamps: "कस्टम स्टैम्प के नमूने",
         gallery_label_idols: "देवताओं के फोटो फ्रेम और मूर्तियों का प्रदर्शन",
         gallery_label_printing: "प्रिंटिंग सेटअप",
-        gallery_label_puja: "पूजा सामग्री संग्रह",
-        gallery_label_customers: "खुश ग्राहक",
+        gallery_label_misc: "विविध संग्रह",
         
         footer_desc: "शिलॉन्ग में लचीलेपन, स्थानीय पारिवारिक मूल्यों और बेजोड़ सामुदायिक सेवा की विरासत।",
         footer_address_title: "पता:",
@@ -210,8 +208,7 @@ const translations = {
         gallery_label_stamps: "কাস্টম স্ট্যাম্পের নমুনা",
         gallery_label_idols: "দেবদেবীর ফটো ফ্রেম এবং মূর্তি প্রদর্শন",
         gallery_label_printing: "প্রিন্টিং সেটআপ",
-        gallery_label_puja: "পূजा সামগ্রী সংগ্রহ",
-        gallery_label_customers: "আমাদের খুশি গ্রাহক",
+        gallery_label_misc: "বিবিধ সংগ্রহ",
         
         footer_desc: "শিলং-এ সহনশীলতা, স্থানীয় পারিবারিক মূল্যবোধ এবং অতুলনীয় সমাজসেবার ঐতিহ্য।",
         footer_address_title: "ঠিকানা:",
