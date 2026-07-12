@@ -17,7 +17,7 @@ const translations = {
         
         hero_title: "A Small Shop with <span class='highlight'>Big Solutions</span>",
         hero_subtitle: "Custom Stamps, Printing, Puja Samagri, and Daily Essentials in Shillong.",
-        hero_description: "Serving Polo Bazar with high-quality printing, retail goods, and digital document assistance. We may be a small storefront, but we house a massive variety of everyday essentials!",
+        hero_description: "Serving Shillong with high-quality printing, retail goods, and digital document assistance. We may be a small storefront, but we house a massive variety of everyday essentials!",
         hero_cta_whatsapp: "<i class='bx bxl-whatsapp'></i> Chat on WhatsApp",
         hero_cta_services: "View Our Services",
         
@@ -93,7 +93,7 @@ const translations = {
         
         hero_title: "एक छोटी दुकान, <span class='highlight'>बड़े समाधान</span>",
         hero_subtitle: "कस्टम स्टैम्प, प्रिंटिंग, पूजा सामग्री और दैनिक आवश्यकताएं शिलॉन्ग में।",
-        hero_description: "पोलो बाजार में उच्च गुणवत्ता वाली प्रिंटिंग, रिटेल सामान और डिजिटल दस्तावेज़ सहायता के साथ सेवा प्रदान कर रहे हैं। हम एक छोटी सी दुकान हो सकते हैं, लेकिन हमारे यहाँ दैनिक ज़रूरतों की भारी विविधता है!",
+        hero_description: "शिलॉन्ग में उच्च गुणवत्ता वाली प्रिंटिंग, रिटेल सामान और डिजिटल दस्तावेज़ सहायता के साथ सेवा प्रदान कर रहे हैं। हम एक छोटी सी दुकान हो सकते हैं, लेकिन हमारे यहाँ दैनिक ज़रूरतों की भारी विविधता है!",
         hero_cta_whatsapp: "<i class='bx bxl-whatsapp'></i> व्हाट्सएप पर चैट करें",
         hero_cta_services: "हमारी सेवाएँ देखें",
         
@@ -169,7 +169,7 @@ const translations = {
         
         hero_title: "একটি ছোট দোকান, <span class='highlight'>বৃহৎ সমাধান</span>",
         hero_subtitle: "কাস্টম স্ট্যাম্প, প্রিন্টিং, পূজা সামগ্রী এবং নিত্যপ্রয়োজনীয় জিনিসপত্র শিলং-এ।",
-        hero_description: "পোলো বাজারে উচ্চ মানের প্রিন্টিং, খুচরা পণ্য এবং ডিজিটাল ডকুমেন্ট সহায়তা প্রদান করছি। আমরা একটি ছোট দোকান হতে পারি, তবে আমাদের এখানে দৈনন্দিন প্রয়োজনীয় জিনিসের বিশাল সংগ্রহ রয়েছে!",
+        hero_description: "শিলং-এ উচ্চ মানের প্রিন্টিং, খুচরা পণ্য এবং ডিজিটাল ডকুমেন্ট সহায়তা প্রদান করছি। আমরা একটি ছোট দোকান হতে পারি, তবে আমাদের এখানে দৈনন্দিন প্রয়োজনীয় জিনিসের বিশাল সংগ্রহ রয়েছে!",
         hero_cta_whatsapp: "<i class='bx bxl-whatsapp'></i> হোয়াটসঅ্যাপে চ্যাট করুন",
         hero_cta_services: "আমাদের সেবাসমূহ দেখুন",
         
